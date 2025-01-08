@@ -105,6 +105,10 @@ const getCommitTimeline = async () => {
     return timeline;
 };
 
+const commitEvents = await getCommitTimeline();
 
+const commitDates = Object.keys(commitEvents);
 
-export { totalRepos, topSixRepos, recentlyUpdatedRepo, recentlyUpdatedRepoDate, repoSizeInMB, getCommitTimeline };
+const commitCounts = Object.values(commitEvents);
+
+export { totalRepos, topSixRepos, recentlyUpdatedRepo, recentlyUpdatedRepoDate, repoSizeInMB, commitDates, commitCounts, commitEvents };
