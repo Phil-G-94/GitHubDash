@@ -6,7 +6,9 @@ import TopRepos from "./components/UI/TopRepos.jsx";
 function App() {
     return (
         <main>
-            <h1 className="text-red-500 text-center">GitHubDash</h1>
+            <h1 className="text-red-700 font-bold text-center text-xl">
+                GitHubDash
+            </h1>
 
             <ReposOverview />
 

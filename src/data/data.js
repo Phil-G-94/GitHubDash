@@ -145,8 +145,10 @@ const getLanguageData = (repos) => {
     return languages;
 };
 
+// grasp a ref to the languages used data in repos
 const languageData = getLanguageData(repos);
 
+// extract key value pairs for use in pie chart
 const languagesUsed = Object.keys(languageData);
 
 const languagesUsedCount = Object.values(languageData);

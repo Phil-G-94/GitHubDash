@@ -7,29 +7,39 @@ import {
 
 function ReposOverview() {
     return (
-        <>
-            <h2 className="text-red-500 text-center">
+        <div className="flex flex-col items-center">
+            <h2 className="text-red-700 font-bold text-center text-lg">
                 Repositories Overview
             </h2>
-            <section className="flex justify-center gap-2">
-                <div>
-                    <h3>Total Repositories:</h3>
-                    <p>{`${totalRepos}`}</p>
-                </div>
-                <div>
-                    <h3>Total Size:</h3>
-                    <p>{`${repoSizeInMB}`}</p>
-                </div>
-                <div>
-                    <h3>Recently Updated:</h3>
-                    <p>{`${recentlyUpdatedRepo.name}`}</p>
-                </div>
-                <div>
-                    <h3>Updated At:</h3>
-                    <p>{`${recentlyUpdatedRepoDate}`}</p>
-                </div>
+            <section className="bg-white rounded-md m-2 p-4 w-max">
+                <article className="flex gap-5">
+                    <div>
+                        <p className="text-lg font-semibold">
+                            Total Repositories:
+                        </p>
+                        <p>{`${totalRepos}`}</p>
+                    </div>
+                    <div>
+                        <p className="text-lg font-semibold">
+                            Total Size:
+                        </p>
+                        <p>{`${repoSizeInMB}`}</p>
+                    </div>
+                    <div>
+                        <p className="text-lg font-semibold">
+                            Recently Updated:
+                        </p>
+                        <p>{`${recentlyUpdatedRepo.name}`}</p>
+                    </div>
+                    <div>
+                        <p className="text-lg font-semibold">
+                            Updated At:
+                        </p>
+                        <p>{`${recentlyUpdatedRepoDate}`}</p>
+                    </div>
+                </article>
             </section>
-        </>
+        </div>
     );
 }
 

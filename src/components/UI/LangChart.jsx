@@ -12,17 +12,12 @@ ChartJS.register(ArcElement, Tooltip, Legend, DoughnutController);
 
 function LangChart() {
     return (
-        <>
-            <h2 className="text-red-500 text-center">
+        <div className="flex flex-col items-center">
+            <h2 className="text-red-700 font-bold text-center text-lg">
                 Languages Used
             </h2>
-            <section>
-                <p className="text-center">
-                    This section should contain a pie chart of all the
-                    languages used in my repos. To be built...
-                </p>
-
-                <div className="flex justify-center">
+            <section className="bg-white rounded-md m-2 p-4 w-max">
+                <article className="flex justify-center">
                     <div className="w-3/4 min-w-64">
                         <Doughnut
                             data={{
@@ -41,12 +36,28 @@ function LangChart() {
                                 responsive: true,
                                 maintainAspectRatio: false,
                                 cutout: "60%",
+                                plugins: {
+                                    tooltip: {
+                                        callbacks: {
+                                            label: function (
+                                                tooltipItem
+                                            ) {
+                                                return (
+                                                    tooltipItem.label +
+                                                    ": " +
+                                                    tooltipItem.raw +
+                                                    "%"
+                                                );
+                                            },
+                                        },
+                                    },
+                                },
                             }}
                         />
                     </div>
-                </div>
+                </article>
             </section>
-        </>
+        </div>
     );
 }
 

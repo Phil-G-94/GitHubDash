@@ -22,17 +22,12 @@ ChartJS.register(
 
 function CommitChart() {
     return (
-        <>
-            <h2 className="text-red-500 text-center">
+        <div className="flex flex-col items-center">
+            <h2 className="text-red-700 font-bold text-center text-lg">
                 Commit Timeline (Year)
             </h2>
-            <section>
-                <p className="text-center">
-                    This section should contain a graph chart of
-                    yearly or monthly commits
-                </p>
-
-                <div className="flex justify-center">
+            <section className="bg-white rounded-md m-2 p-4 w-max">
+                <article className="flex justify-center">
                     <div className="w-1/3 min-w-96">
                         <Chart
                             key={commitDates.length}
@@ -80,9 +75,9 @@ function CommitChart() {
                             }}
                         />
                     </div>
-                </div>
+                </article>
             </section>
-        </>
+        </div>
     );
 }
 
