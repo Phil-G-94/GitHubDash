@@ -32,8 +32,8 @@ function CommitChart() {
                     yearly or monthly commits
                 </p>
 
-                <div className="flex justify-center gap-2">
-                    <div className="w-1/3">
+                <div className="flex justify-center">
+                    <div className="w-1/3 min-w-96">
                         <Chart
                             key={commitDates.length}
                             type="line"

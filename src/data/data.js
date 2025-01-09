@@ -44,6 +44,7 @@ const repoSizeInMB = (repoSizeInKB / 1024).toFixed(2) + " " + "MB";
 
 /* */
 
+// helper function to retrieve and return event data
 const getEventData = async (url) => {
     const response = await fetch(url, {
         headers: {
@@ -60,6 +61,7 @@ const getEventData = async (url) => {
     return data;
 };
 
+// create and return a timeline of commits
 const getCommitTimeline = async () => {
 
     const url = `https://api.github.com/users/${user}/events`;
@@ -105,10 +107,48 @@ const getCommitTimeline = async () => {
     return timeline;
 };
 
-const commitEvents = await getCommitTimeline();
+// await commit events
+const commitData = await getCommitTimeline();
 
-const commitDates = Object.keys(commitEvents);
+// grasp dates from commit key/value pairs
+const commitDates = Object.keys(commitData);
 
-const commitCounts = Object.values(commitEvents);
+// grasp no. of commits from commit key/value pairs
+const commitCounts = Object.values(commitData);
 
-export { totalRepos, topSixRepos, recentlyUpdatedRepo, recentlyUpdatedRepoDate, repoSizeInMB, commitDates, commitCounts, commitEvents };
+// retrieve / return data on languages used
+
+const getLanguageData = (repos) => {
+    const languages = {};
+
+    for (const repo of repos) {
+        if (repo.language) {
+            if (languages[repo.language]) {
+                languages[repo.language] += 1;
+            } else {
+                languages[repo.language] = 1;
+            }
+        }
+    }
+
+    const total = Object.values(languages).reduce(
+        (sum, count) => sum + count,
+        0
+    );
+
+    for (const key in languages) {
+        languages[key] = parseFloat(
+            ((languages[key] / total) * 100).toFixed(2)
+        );
+    }
+
+    return languages;
+};
+
+const languageData = getLanguageData(repos);
+
+const languagesUsed = Object.keys(languageData);
+
+const languagesUsedCount = Object.values(languageData);
+
+export { totalRepos, topSixRepos, recentlyUpdatedRepo, recentlyUpdatedRepoDate, repoSizeInMB, commitDates, commitCounts, languagesUsed, languagesUsedCount };
