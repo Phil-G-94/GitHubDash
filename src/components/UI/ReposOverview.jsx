@@ -4,6 +4,7 @@ import {
     recentlyUpdatedRepo,
     recentlyUpdatedRepoDate,
 } from "../../data/data";
+import { Repository } from "iconoir-react";
 
 function ReposOverview() {
     return (
@@ -11,6 +12,11 @@ function ReposOverview() {
             <h2 className="text-red-700 font-bold text-center text-lg">
                 Repositories Overview
             </h2>
+
+            <span className="flex justify-end">
+                <Repository />
+            </span>
+
             <article className="grid grid-cols-2 place-content-center pl-2 pr-2 gap-6 md:grid-cols-4 ">
                 <div>
                     <p className="text-lg font-semibold">
