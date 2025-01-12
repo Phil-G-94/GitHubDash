@@ -22,62 +22,60 @@ ChartJS.register(
 
 function CommitChart() {
     return (
-        <div className="flex flex-col items-center">
+        <section className="bg-white rounded-md w-max">
             <h2 className="text-red-700 font-bold text-center text-lg">
-                Commit Timeline (Year)
+                Commit Timeline (Month)
             </h2>
-            <section className="bg-white rounded-md m-2 p-4 w-max">
-                <article className="flex justify-center">
-                    <div className="w-1/3 min-w-96">
-                        <Chart
-                            key={commitDates.length}
-                            type="line"
-                            data={{
-                                labels: commitDates,
-                                datasets: [
-                                    {
-                                        label: "Commits",
-                                        data: commitCounts,
-                                        borderColor: "#ef4444",
-                                        backgroundColor:
-                                            "rgb(239, 68, 68)",
-                                        borderWidth: 2,
-                                        tension: 0.3,
-                                    },
-                                ],
-                            }}
-                            options={{
-                                responsive: true,
-                                maintainAspectRatio: false,
-                                plugins: {
-                                    legend: {
+            <article>
+                <div>
+                    <Chart
+                        key={commitDates.length}
+                        type="line"
+                        data={{
+                            labels: commitDates,
+                            datasets: [
+                                {
+                                    label: "Commits",
+                                    data: commitCounts,
+                                    borderColor: "#ef4444",
+                                    backgroundColor:
+                                        "rgb(239, 68, 68)",
+                                    borderWidth: 2,
+                                    tension: 0.3,
+                                },
+                            ],
+                        }}
+                        options={{
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    display: true,
+                                    position: "top",
+                                },
+                                tooltip: {
+                                    enabled: true,
+                                },
+                            },
+                            scales: {
+                                x: {
+                                    title: {
                                         display: true,
-                                        position: "top",
-                                    },
-                                    tooltip: {
-                                        enabled: true,
+                                        text: "Date",
                                     },
                                 },
-                                scales: {
-                                    x: {
-                                        title: {
-                                            display: true,
-                                            text: "Date",
-                                        },
-                                    },
-                                    y: {
-                                        title: {
-                                            display: true,
-                                            text: "Commit count",
-                                        },
+                                y: {
+                                    title: {
+                                        display: true,
+                                        text: "Commit count",
                                     },
                                 },
-                            }}
-                        />
-                    </div>
-                </article>
-            </section>
-        </div>
+                            },
+                        }}
+                    />
+                </div>
+            </article>
+        </section>
     );
 }
 
