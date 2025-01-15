@@ -1,6 +1,7 @@
 import { commitDates, commitCounts } from "../../data/data";
 import {
     Chart as ChartJS,
+    LineController,
     LineElement,
     PointElement,
     CategoryScale,
@@ -12,6 +13,7 @@ import { Chart } from "react-chartjs-2";
 
 // reg necessary modules for line chart
 ChartJS.register(
+    LineController,
     LineElement,
     PointElement,
     CategoryScale,
