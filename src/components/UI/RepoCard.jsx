@@ -4,8 +4,6 @@ import PropTypes from "prop-types";
 function RepoCard({ repo }) {
     const updatedAt = new Date(repo.updated_at).toLocaleDateString();
 
-    console.log(repo);
-
     return (
         <a
             href={repo.html_url}

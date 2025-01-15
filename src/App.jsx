@@ -13,19 +13,19 @@ function App() {
                 <p>GitHub activity dashboard</p>
             </header>
 
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <div className="flex flex-col items-center col-span-full">
+            <div className="grid grid-cols-1 gap-8 content-center md:grid-cols-3 md:gap-28">
+                <div className="flex justify-center col-span-full md:col-span-full">
                     <ReposOverview />
                 </div>
 
-                <div className="flex flex-col items-center col-span-full md:col-span-1">
+                <div className="flex justify-center col-span-full md:row-start-2 md:col-start-1 md:col-end-3">
                     <LangChart />
                 </div>
-                <div className="flex flex-col items-center col-span-full md:col-span-1">
+                <div className="flex justify-center col-span-full md:row-start-2 md:col-start-2 md:col-end-4">
                     <CommitChart />
                 </div>
 
-                <div className="flex flex-col items-center col-span-full">
+                <div className="flex justify-center col-span-full md:col-span-full">
                     <TopRepos />
                 </div>
             </div>
