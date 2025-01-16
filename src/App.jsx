@@ -5,32 +5,30 @@ import TopRepos from "./components/UI/TopRepos.jsx";
 
 function App() {
     return (
-        <main>
+        <main className="container mx-auto">
             <header className="flex flex-col items-center">
-                <h1 className="text-red-700 font-bold text-center text-xl">
+                <h1 className="text-red-700 font-bold text-center text-5xl">
                     GitHubDash
                 </h1>
                 <p>GitHub activity dashboard</p>
             </header>
 
             <div className="grid grid-cols-1 gap-8 content-center md:grid-cols-3 md:gap-28">
-                <div className="flex justify-center col-span-full md:col-span-full">
+                <article className="flex justify-center col-span-full md:col-span-full">
                     <ReposOverview />
-                </div>
+                </article>
 
-                <div className="flex justify-center col-span-full md:row-start-2 md:col-start-1 md:col-end-3">
+                <article className="flex justify-center col-span-full md:row-start-2 md:col-start-1 md:col-end-3">
                     <LangChart />
-                </div>
-                <div className="flex justify-center col-span-full md:row-start-2 md:col-start-2 md:col-end-4">
+                </article>
+                <article className="flex justify-center col-span-full md:row-start-2 md:col-start-2 md:col-end-4">
                     <CommitChart />
-                </div>
+                </article>
 
-                <div className="flex justify-center col-span-full md:col-span-full">
+                <article className="flex justify-center col-span-full md:col-span-full">
                     <TopRepos />
-                </div>
+                </article>
             </div>
-
-            <footer></footer>
         </main>
     );
 }
