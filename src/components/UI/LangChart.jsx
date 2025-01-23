@@ -25,7 +25,8 @@ function LangChart() {
                                 {
                                     data: languagesUsedCount,
                                     backgroundColor: [
-                                        "#ff5448",
+                                        "#3178c6",
+                                        "#f7df1e",
                                         "#ff6c48",
                                     ],
                                 },
