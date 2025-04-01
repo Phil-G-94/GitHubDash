@@ -4,8 +4,8 @@ const user = import.meta.env.VITE_GH_USER;
 const getRepos = async () => {
     const response = await fetch(`https://api.github.com/users/${user}/repos`, {
         headers: {
-            Authorization: `token ${token}`
-        }
+            Authorization: `token ${token}`,
+        },
     });
 
     if (!response.ok) {
@@ -15,7 +15,6 @@ const getRepos = async () => {
     const data = await response.json();
 
     return data;
-
 };
 
 // await repo data
@@ -48,8 +47,8 @@ const repoSizeInMB = (repoSizeInKB / 1024).toFixed(2) + " " + "MB";
 const getEventData = async (url) => {
     const response = await fetch(url, {
         headers: {
-            Authorization: `token ${token}`
-        }
+            Authorization: `token ${token}`,
+        },
     });
 
     if (!response.ok) {
@@ -63,7 +62,6 @@ const getEventData = async (url) => {
 
 // create and return a timeline of commits
 const getCommitTimeline = async () => {
-
     const url = `https://api.github.com/users/${user}/events`;
 
     const timeline = {};
@@ -131,15 +129,10 @@ const getLanguageData = (repos) => {
         }
     }
 
-    const total = Object.values(languages).reduce(
-        (sum, count) => sum + count,
-        0
-    );
+    const total = Object.values(languages).reduce((sum, count) => sum + count, 0);
 
     for (const key in languages) {
-        languages[key] = parseFloat(
-            ((languages[key] / total) * 100).toFixed(2)
-        );
+        languages[key] = parseFloat(((languages[key] / total) * 100).toFixed(2));
     }
 
     return languages;
@@ -153,4 +146,14 @@ const languagesUsed = Object.keys(languageData);
 
 const languagesUsedCount = Object.values(languageData);
 
-export { totalRepos, topSixRepos, recentlyUpdatedRepo, recentlyUpdatedRepoDate, repoSizeInMB, commitDates, commitCounts, languagesUsed, languagesUsedCount };
+export {
+    totalRepos,
+    topSixRepos,
+    recentlyUpdatedRepo,
+    recentlyUpdatedRepoDate,
+    repoSizeInMB,
+    commitDates,
+    commitCounts,
+    languagesUsed,
+    languagesUsedCount,
+};

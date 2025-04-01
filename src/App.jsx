@@ -7,10 +7,10 @@ function App() {
     return (
         <main className="container mx-auto">
             <header className="flex flex-col items-center">
-                <h1 className="text-red-700 font-bold text-center text-5xl">
+                <h1 className="text-eggshell font-bold text-center text-5xl">
                     GitHubDash
                 </h1>
-                <p>GitHub activity dashboard</p>
+                <p className="text-eggshell">GitHub activity dashboard</p>
             </header>
 
             <div className="grid grid-cols-1 gap-8 content-center md:grid-cols-3 md:gap-28">

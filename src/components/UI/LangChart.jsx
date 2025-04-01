@@ -12,8 +12,8 @@ ChartJS.register(ArcElement, Tooltip, Legend, DoughnutController);
 
 function LangChart() {
     return (
-        <section className="bg-white rounded-md w-max m-0">
-            <h2 className="text-red-700 font-bold text-center text-lg">
+        <section className="bg-eggshell rounded-md w-max m-0">
+            <h2 className="text-delft-blue font-bold text-center text-lg">
                 Languages Used
             </h2>
             <article>
@@ -39,9 +39,7 @@ function LangChart() {
                             plugins: {
                                 tooltip: {
                                     callbacks: {
-                                        label: function (
-                                            tooltipItem
-                                        ) {
+                                        label: function (tooltipItem) {
                                             return (
                                                 tooltipItem.label +
                                                 ": " +

@@ -24,8 +24,8 @@ ChartJS.register(
 
 function CommitChart() {
     return (
-        <section className="bg-white rounded-md w-max m-0">
-            <h2 className="text-red-700 font-bold text-center text-lg">
+        <section className="bg-eggshell rounded-md w-max m-0">
+            <h2 className="text-delft-blue font-bold text-center text-lg">
                 Commit Timeline (Month)
             </h2>
             <article>
@@ -39,9 +39,8 @@ function CommitChart() {
                                 {
                                     label: "Commits",
                                     data: commitCounts,
-                                    borderColor: "#ef4444",
-                                    backgroundColor:
-                                        "rgb(239, 68, 68)",
+                                    borderColor: "#3D405B",
+                                    backgroundColor: "#E07A5F",
                                     borderWidth: 2,
                                     tension: 0.3,
                                 },
