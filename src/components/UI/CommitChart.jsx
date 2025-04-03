@@ -24,7 +24,7 @@ ChartJS.register(
 
 function CommitChart() {
     return (
-        <section className="bg-eggshell rounded-md w-max m-0">
+        <section className="bg-eggshell rounded-md w-max">
             <h2 className="text-delft-blue font-bold text-center text-lg">
                 Commit Timeline (Month)
             </h2>

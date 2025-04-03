@@ -13,8 +13,8 @@ function App() {
                 <p className="text-eggshell">GitHub activity dashboard</p>
             </header>
 
-            <div className="grid grid-cols-1 gap-8 content-center md:grid-cols-3 md:gap-28">
-                <article className="flex justify-center col-span-full md:col-span-full">
+            <section className="grid grid-cols-1 gap-y-20 content-center md:grid-cols-3 md:gap-y-64">
+                <article className="flex justify-center col-span-full">
                     <ReposOverview />
                 </article>
 
@@ -25,10 +25,10 @@ function App() {
                     <CommitChart />
                 </article>
 
-                <article className="flex justify-center col-span-full md:col-span-full">
+                <article className="flex justify-center col-span-full">
                     <TopRepos />
                 </article>
-            </div>
+            </section>
         </main>
     );
 }

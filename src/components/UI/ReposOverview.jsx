@@ -8,7 +8,7 @@ import { Repository } from "iconoir-react";
 
 function ReposOverview() {
     return (
-        <section className="bg-eggshell rounded-md w-max m-0">
+        <section className="bg-eggshell rounded-md w-max m-4 p-4">
             <h2 className="text-delft-blue font-bold text-center text-lg">
                 Repositories Overview
             </h2>
@@ -17,7 +17,7 @@ function ReposOverview() {
                 <Repository />
             </span>
 
-            <article className="text-delft-blue grid grid-cols-2 place-content-center pl-2 pr-2 gap-6 md:grid-cols-4 ">
+            <article className="text-delft-blue grid grid-cols-2 place-items-center pl-2 pr-2 gap-6 md:grid-cols-4 ">
                 <span>
                     <p className="text-lg font-semibold">Total Repositories:</p>
                     <p>{`${totalRepos}`}</p>
