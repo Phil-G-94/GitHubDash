@@ -13,7 +13,7 @@ function App() {
                 <p className="text-eggshell">GitHub activity dashboard</p>
             </header>
 
-            <section className="grid grid-cols-1 gap-y-20 content-center md:grid-cols-3 md:gap-y-64">
+            <section className="grid grid-cols-1 gap-y-14 content-center md:grid-cols-3 md:gap-y-40">
                 <article className="flex justify-center col-span-full">
                     <ReposOverview />
                 </article>
