@@ -17,7 +17,7 @@ GitHubDash/
 ```
 
 ## <img src="https://gist.githubusercontent.com/Phil-G-94/b0921d2344ee81afb6b7a4c8881f3803/raw/d59ec2cc780d776a946c11afbd94eee3ffbcc0cb/cog.svg" /> Environment Variables
-`VITE_GH_TOKEN=yourGitHubAPIToken`
+`VITE_GH_TOKEN=yourGitHubAPIToken`  
 `VITE_GH_USER=yourGitHubUsername`
 
 ## <img src="https://gist.githubusercontent.com/Phil-G-94/b0921d2344ee81afb6b7a4c8881f3803/raw/d59ec2cc780d776a946c11afbd94eee3ffbcc0cb/laptop.svg" /> Getting Started
