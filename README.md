@@ -31,8 +31,6 @@ To run the app locally:
 
 3) From the root directory, run `npm run dev` to start the project in development mode or `npm run start` to run the app in production.
 
-## <img src="https://gist.githubusercontent.com/Phil-G-94/b0921d2344ee81afb6b7a4c8881f3803/raw/729a6f0cdc40687f65158d0c3abcba019fcdf74c/eth-port.svg" /> API Endpoints
-
 ## <img src="https://gist.githubusercontent.com/Phil-G-94/b0921d2344ee81afb6b7a4c8881f3803/raw/d59ec2cc780d776a946c11afbd94eee3ffbcc0cb/creative-commons.svg" /> License
 
 © Phil Georgiou 2025. This work is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/).
