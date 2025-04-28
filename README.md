@@ -1,6 +1,6 @@
 # <img src="https://gist.githubusercontent.com/Phil-G-94/b0921d2344ee81afb6b7a4c8881f3803/raw/d59ec2cc780d776a946c11afbd94eee3ffbcc0cb/rocket.svg"  /> GitHubDash
 
-> A custom dashboard displaying profile information retrieved by the GitHub API. 
+> A custom dashboard displaying GitHub activity and repository information - built using the GitHub API. 
 
 ---
 
