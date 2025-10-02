@@ -10,6 +10,17 @@ import { Doughnut } from "react-chartjs-2";
 
 ChartJS.register(ArcElement, Tooltip, Legend, DoughnutController);
 
+console.log(languagesUsed); // ["Python", "PHP", "JavaScript", "TypeScript", "HTML"]
+console.log(languagesUsedCount); // [7.14, 7.14, 71.43, 7.14, 7.14]
+
+const languageColors = {
+    Python: "#3776AB", // Python blue
+    PHP: "#777BB4", // PHP purple
+    JavaScript: "#F7DF1E", // JS yellow
+    TypeScript: "#3178C6", // TS blue
+    HTML: "#E34F26", // HTML orange
+};
+
 function LangChart() {
     return (
         <section className="bg-eggshell rounded-md w-max">
@@ -24,22 +35,25 @@ function LangChart() {
                             datasets: [
                                 {
                                     data: languagesUsedCount,
-                                    backgroundColor: [
-                                        "#f7df1e",
-                                        "#3178c6",
-                                        "#ff6c48",
-                                    ],
+                                    backgroundColor: languagesUsed.map(
+                                        (lang) => languageColors[lang]
+                                    ),
                                 },
                             ],
                         }}
                         options={{
                             responsive: true,
                             maintainAspectRatio: false,
-                            cutout: "60%",
+                            cutout: "30%",
+                            interaction: {
+                                mode: "point",
+                                intersect: true,
+                            },
                             plugins: {
                                 tooltip: {
                                     callbacks: {
                                         label: function (tooltipItem) {
+                                            console.log(tooltipItem);
                                             return (
                                                 tooltipItem.label +
                                                 ": " +
