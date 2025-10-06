@@ -3,7 +3,7 @@ import RepoCard from "./RepoCard.jsx";
 
 function TopRepos() {
     return (
-        <section className="flex flex-col gap-2  w-max">
+        <section className="flex flex-col gap-2 w-max">
             <h2 className="text-eggshell font-bold text-center text-lg">
                 Top Repos
             </h2>

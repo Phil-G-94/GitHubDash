@@ -10,15 +10,12 @@ import { Doughnut } from "react-chartjs-2";
 
 ChartJS.register(ArcElement, Tooltip, Legend, DoughnutController);
 
-console.log(languagesUsed); // ["Python", "PHP", "JavaScript", "TypeScript", "HTML"]
-console.log(languagesUsedCount); // [7.14, 7.14, 71.43, 7.14, 7.14]
-
 const languageColors = {
-    Python: "#3776AB", // Python blue
-    PHP: "#777BB4", // PHP purple
-    JavaScript: "#F7DF1E", // JS yellow
-    TypeScript: "#3178C6", // TS blue
-    HTML: "#E34F26", // HTML orange
+    Python: "#3776AB",
+    PHP: "#777BB4",
+    JavaScript: "#F7DF1E",
+    TypeScript: "#3178C6",
+    HTML: "#E34F26",
 };
 
 function LangChart() {
@@ -44,7 +41,7 @@ function LangChart() {
                         options={{
                             responsive: true,
                             maintainAspectRatio: false,
-                            cutout: "30%",
+                            cutout: "60%",
                             interaction: {
                                 mode: "point",
                                 intersect: true,

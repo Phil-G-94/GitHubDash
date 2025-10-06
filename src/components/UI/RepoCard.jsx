@@ -9,7 +9,7 @@ function RepoCard({ repo }) {
             href={repo.html_url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-burnt-sienna bg-eggshell rounded-md shadow-md p-3 hover:-translate-y-2"
+            className="text-burnt-sienna bg-eggshell rounded-md shadow-md p-3 hover:-translate-y-2 m-2"
         >
             <span className="grid grid-cols-1  gap-4">
                 <p className="text-delft-blue font-semibold">{repo.name}</p>
